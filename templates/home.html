@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Text classification</title>
+<head>
+</head>
+<body>
+	<div>
+		<form action="{{url_for('analyze_text')}}" method="POST">
+            <p>Введите текст</p>
+            <textarea name="text" rows="4" cols="50">{{ text }}</textarea>
+            <br/>
+            <input type="submit" class="btn-info" value="predict">
+        </form>
+	</div>
+    <div>
+        <p>Уровень токсичности: {{ toxic }}</p>
+    </div>
+</body>
+</html>
